@@ -12,6 +12,7 @@
     --azul-degrade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
     --fonte-principal: "Poppins";
     --azul: #002F52;
+    --fonte-secundario: "Josefin Sans";
 }
 
 body {
@@ -19,4 +20,56 @@ body {
     font-family: var(--fonte-principal);
     font-size: 16px;
     font-weight: 400;
+}
+
+.container__titulo {
+    display: none;
+  }
+
+  .opções {
+    display: none;
+  }
+
+@media screen and (min-width: 1024px){
+    .container__titulo,
+    .container__titulo--negrito {
+    font-family: var(--fonte-secundario);
+    font-size: 30px;
+}
+
+.container__titulo {
+    font-weight: 400;
+}
+  
+.container__titulo--negrito {
+    font-weight: 700;
+}
+
+.container__titulo {
+    font-weight: 400;
+    display: block;
+}
+
+.opções {
+    display: flex;
+  }
+
+.opções_item {
+    padding: 0em 1em;
+    text-transform: uppercase;
+}
+
+.opções__link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .opções_botão:checked ~ .lista-menu {
+    display: block;
+    width: auto;
+  }
+
+  .opções_botão {
+    display: none;
+  }
 }
